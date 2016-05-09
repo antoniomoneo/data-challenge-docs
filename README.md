@@ -31,6 +31,10 @@ Puedes acceder desde aquí: [#](#)
 ```
 
 #API
+<<<<<<< HEAD
+=======
+Se puede obtener la informacion del mapeo en formato JSON llamando al script ``data.php``
+>>>>>>> 94ffe0eca6e3527cf2a224513dc5da29554f998a
 
 ```
 # obtener los datos utilizando cURL
@@ -59,3 +63,7 @@ Y obtenemos la siguiente estructura
 #
 
 ```
+<<<<<<< HEAD
+=======
+
+>>>>>>> 94ffe0eca6e3527cf2a224513dc5da29554f998a
