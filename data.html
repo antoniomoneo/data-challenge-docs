@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>IDB - Data Challenge</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/prettify.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">IDB - Data Challenge</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="index.html">About</a></li>
+            <li class="active"><a href="#">Data Structures</a></li>
+            <li><a href="api.html">API</a></li>
+            <li><a href="odbc.html">ODBC</a></li>
+            <li><a href="sandbox.html">Sandbox</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div>
+        <h1>Data Structures</h1>
+        <p class="lead">The courses are provided by the bank via the Open Source eDX platform; you can find more information about it <a href="http://docs.edx.org" target="_blank">here</a></p>
+        <p>The records are grouped by course and segmented by purpose in the following way:</p>
+
+        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+          <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingOne">
+              <h4 class="panel-title">
+                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">users</a>
+              </h4>
+            </div>
+            <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+              <div class="panel-body">
+                <p>Defines the current state for the registered users in the given course.</p>
+                <pre class="prettyprint">{
+	"id" : 5278234,
+	"is_staff" : 0,
+	"is_active" : 1,
+	"is_superuser" : 0,
+	"last_login" : "2016-01-06 03:27:28.366776",
+	"date_joined" : "2014-09-11 15:41:40",
+	"status" : "",
+	"country" : "",
+	"show_country" : 0,
+	"date_of_birth" : "NULL",
+	"interesting_tags" : "",
+	"ignored_tags" : "",
+	"email_tag_filter_strategy" : 0,
+	"display_tag_filter_strategy" : 0,
+	"consecutive_days_visit_count" : 0
+}</pre>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingTwo">
+              <h4 class="panel-title">
+                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">userIDs</a>
+              </h4>
+            </div>
+            <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+              <div class="panel-body">
+                <p>Defines the users ID code and link them against it's own <code>hash_id</code>.</p>
+                <pre class="prettyprint">{
+	"hash_id" : "e9f57dee9a6a5750c8ca7ecddf617be1",
+	"id" : 2742945
+}</pre>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingThree">
+              <h4 class="panel-title">
+                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">certificates</a>
+              </h4>
+            </div>
+            <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+              <div class="panel-body">
+                <p>List all the existing certificates for the given course; including the certification <code>mode</code>, <code>status</code> and <code>created_date</code>.</p>
+                <pre class="prettyprint">{
+	"id" : 14240457,
+	"user_id" : 9568,
+	"download_url" : "",
+	"grade" : 0.1,
+	"course_id" : "course-v1:IDBx+IDB_LSC101x+2015_T4",
+	"key" : "",
+	"distinction" : 0,
+	"status" : "notpassing",
+	"verify_uuid" : "",
+	"download_uuid" : "",
+	"created_date" : "2015-12-29 17:46:18",
+	"modified_date" : "2015-12-29 17:46:18",
+	"error_reason" : "",
+	"mode" : "honor"
+}</pre>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingFour">
+              <h4 class="panel-title">
+                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">courseware</a>
+              </h4>
+            </div>
+            <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+              <div class="panel-body">
+                <p>Records the user state against the modules composing the course structure and content.</p>
+                <pre class="prettyprint">{
+	"id" : 708726398,
+	"module_type" : "video",
+	"module_id" : "block-v1:IDBx+IDB_LSC101x+2015_T4+type@video+block@e22a6ccd6f474074b7374f44e47e9cc8",
+	"student_id" : 8641190,
+	"state" : "{\"saved_video_position\": \"00:00:00\"}",
+	"grade" : "NULL",
+	"created" : "2015-12-01 15:44:39",
+	"modified" : "2015-12-01 15:44:39",
+	"max_grade" : "NULL",
+	"done" : "na",
+	"course_id" : "course-v1:IDBx+IDB_LSC101x+2015_T4"
+}</pre>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingFive">
+              <h4 class="panel-title">
+                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">demographics</a>
+              </h4>
+            </div>
+            <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
+              <div class="panel-body">
+                <p>This collection holds the user profile information, for example here we'll be able to group the users on the course based on: <code>language</code>, <code>location</code>, <code>gender</code>, <code>level_of_education</code>, etc.</p>
+                <pre class="prettyprint">{
+	"id" : 2738679,
+	"user_id" : 5042772,
+	"language" : "",
+	"location" : "",
+	"meta" : "",
+	"courseware" : "course.xml",
+	"gender" : "m",
+	"year_of_birth" : 1963,
+	"level_of_education" : "b",
+	"goals" : "",
+	"allow_certificate" : 1,
+	"country" : "US",
+	"city" : "NULL"
+}</pre>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingSix">
+              <h4 class="panel-title">
+                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseSix" aria-expanded="false" aria-controls="collapseSix">enrollments</a>
+              </h4>
+            </div>
+            <div id="collapseSix" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSix">
+              <div class="panel-body">
+                <p>Holds the date and status of the users's enrollments to the given course.</p>
+                <pre class="prettyprint">{
+	"id" : 16719738,
+	"user_id" : 5042772,
+	"course_id" : "course-v1:IDBx+IDB_LSC101x+2015_T4",
+	"created" : "2015-08-14 18:20:06",
+	"is_active" : 1,
+	"mode" : "honor"
+}</pre>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingSeven">
+              <h4 class="panel-title">
+                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">events</a>
+              </h4>
+            </div>
+            <div id="collapseSeven" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSeven">
+              <div class="panel-body">
+                <p>The events collection holds the information of all the activity the users perform on the platform regardless of the specific course.</p>
+                <p>We can determine the user performing the event by inspecting the available <code>context.user_id</code> and the course it relates to by <code>context.course_id</code></p>
+                <pre class="prettyprint">{
+	"username" : "noizamora",
+	"event_type" : "/courses/course-v1:IDBx+IDB10x+2015_T4/courseware/c214ab42f119459dae617a0fb86481a3/ac390f66d86a4df1ad26b712efc9c799/",
+	"ip" : "201.191.255.128",
+	"agent" : "Mozilla/5.0 (Linux; Android 5.1.1; SM-N910C Build/LMY47X) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.83 Mobile Safari/537.36",
+	"host" : "courses.edx.org",
+	"referer" : "",
+	"accept_language" : "es-419,es;q=0.8,en;q=0.6",
+	"event" : "{\"POST\": {}, \"GET\": {}}",
+	"event_source" : "server",
+	"context" : {
+		"course_user_tags" : {
+
+		},
+		"user_id" : 8891306,
+		"org_id" : "IDBx",
+		"course_id" : "course-v1:IDBx+IDB10x+2015_T4",
+		"path" : "/courses/course-v1:IDBx+IDB10x+2015_T4/courseware/c214ab42f119459dae617a0fb86481a3/ac390f66d86a4df1ad26b712efc9c799/"
+	},
+	"time" : "2016-01-01T19:17:00.005256+00:00",
+	"page" : null
+}</pre>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/prettify/prettify.js"></script>
+    <script>
+      !function ($) {
+        $(function(){
+          window.prettyPrint && prettyPrint()
+        })
+      }(window.jQuery)
+    </script>
+  </body>
+</html>
